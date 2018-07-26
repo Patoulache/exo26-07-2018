@@ -8,7 +8,11 @@ class Analyze {
 
   public function __construct() {
     $this->str = $_POST['donnees'];
-
+    $this->tbl = [
+      'letter'  => $this->calcLettre(),
+      'mots'    => $this->calcMot(),
+      'phrases' => $this->calcPhrase(),
+    ];
 
 
   }
@@ -26,7 +30,7 @@ class Analyze {
     $countMots = preg_split("$regex", "$this->str");
     $countMots1 = count($countMots);
 
-    $this->tbl = ['mot' => $countMots1];
+    return $countMots1;
   }
 
   private function calcPhrase() {
@@ -38,13 +42,6 @@ class Analyze {
   }
 
   public function getValeur() {
-    $this->tbl = [
-      'letter'  => $this->calcLettre(),
-      'mots'    => $this->calcMot(),
-      'phrases' => $this->calcPhrase(),
-    ];
-
-
 
     return $this->tbl;
   }

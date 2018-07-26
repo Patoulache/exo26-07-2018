@@ -14,7 +14,8 @@ class Traitement {
       require ('Modele/Analyze.php');
       $analyse = new Analyze();
       $ret = $analyse->getValeur();
-      echo json_encode($ret);
+      var_dump($ret);
+      echo $ret;
     }
 
   }

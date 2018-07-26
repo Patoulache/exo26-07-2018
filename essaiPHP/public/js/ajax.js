@@ -14,11 +14,8 @@ AJAX = {
 
     AJAX.req.onload = function(){
 
-      var retour = AJAX.req.responseText;
+      var retour = AJAX.req.response;
       console.log(retour);
-      console.log(typeof retour);
-
-
     }
 
 
