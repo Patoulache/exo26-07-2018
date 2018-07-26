@@ -11,11 +11,10 @@ class Traitement {
 
     if(isset($_POST['donnees'])){
 
-      require ('Modele/Analyze.php');
+      require ('../Modele/Analyze.php');
       $analyse = new Analyze();
       $ret = $analyse->getValeur();
-      var_dump($ret);
-      echo $ret;
+      echo json_encode($ret);
     }
 
   }

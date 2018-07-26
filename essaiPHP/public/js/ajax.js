@@ -14,16 +14,34 @@ AJAX = {
 
     AJAX.req.onload = function(){
 
-      var retour = AJAX.req.response;
-      console.log(retour);
+      var retour = JSON.parse(AJAX.req.response);
+      AJAX.ajout(retour);
+
     }
 
 
-    AJAX.req.open('POST', 'index.php', true);
+    AJAX.req.open('POST', 'Modele/traitement.php', true);
     AJAX.req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     AJAX.req.send('donnees='.concat(valeur));
 
+  },
+
+  ajout : function(obj) {
+
+    var newP, contenu;
+
+    for(var key in obj){
+
+      var recupe    = document.querySelector('.'+key);
+      newP          = document.createElement('p');
+      contenu       = document.createTextNode(obj[key]);
+
+      newP.appendChild(contenu);
+      recupe.appendChild(newP);
+    }
   }
+
+
 };
 
 window.onload = AJAX.init;

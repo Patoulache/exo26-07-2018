@@ -19,13 +19,13 @@
       </div>
 
       <div class="cotedroit">
-        <div class="lettre">
+        <div class="lettre" name="rec">
           <h3>Stat lettres</h3>
         </div>
-        <div class="mot">
+        <div class="mot" name="rec">
           <h3>Stat mots</h3>
         </div>
-        <div class="phrase">
+        <div class="phrase" name="rec">
           <h3>Stat phrases</h3>
         </div>
       </div>
