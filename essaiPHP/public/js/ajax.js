@@ -8,23 +8,22 @@ AJAX = {
 
   },
 
-  test: function (){
+  test: function () {
 
-    var donnees = document.querySelector('textarea[name=champ]').value;
+    var valeur = document.querySelector('textarea[name=champ]').value;
 
     AJAX.req.onload = function(){
 
-      var retour = AJAX.req.responseText;
-      console.log(typeof retour);
-
-
+      var retour = AJAX.req.response;
+      console.log(retour);
     }
 
 
     AJAX.req.open('POST', 'index.php', true);
     AJAX.req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    AJAX.req.send('donnees='.concat(donnees));
+    AJAX.req.send('donnees='.concat(valeur));
+
   }
-}
+};
 
 window.onload = AJAX.init;

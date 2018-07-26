@@ -2,59 +2,45 @@
 
 class Analyze {
 
-  private $tbl = array();
- /*  $str = $_POST['donnees']; */
+  private $tbl = [];
+  private $str;
 
 
   public function __construct() {
-
+    $this->str = $_POST['donnees'];
     $this->tbl = [
       'letter'  => $this->calcLettre(),
       'mots'    => $this->calcMot(),
       'phrases' => $this->calcPhrase(),
     ];
 
+
   }
 
   private function calcLettre() {
-    $str = $_POST['donnees'];
-    $regex = '/[a-zA-Z]/';
+    $regex = '/[a-zA-Z-0-9À-ÿ]/';
     $countLetter = preg_match_all("$regex", "$this->str");
-
-    return $countLetter;
+    echo $countLetter;
 
   }
 
   private function calcMot() {
 
-    $str = $_POST['donnees'];
-    $regex = '/[^A-Za-zÀ-ÿ]/';
-    $countMots = preg_split("$regex", "$this->str");
-    $countMots1 = count($countMots);
-
-    return $countMots1;
+    $regex = '/[A-Za-zÀ-ÿ0-9-]+/';
+    $countMots = preg_match_all("$regex", "$this->str");
+    echo $countMots;
   }
 
   private function calcPhrase() {
-    $str = $_POST['donnees'];
-    $regex = '/[^.!?]/';
-    $countPhrases = explode("$regex", "$this->str");
-    $countPhrases = count($countPhrases)-1;
-
-    return $countPhrases;
+    $regex = '/[.!?]+/';
+    $countPhrases = preg_match_all("$regex", "$this->str");
+    echo $countPhrases;
   }
 
-  public function getValeur() {
+/*   public function getValeur() {
+
     return $this->tbl;
-  }
+  } */
 
 }
-
-
-
-
-
-
-
-
 ?>

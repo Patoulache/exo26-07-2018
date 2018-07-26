@@ -1,8 +1,6 @@
 <?php
-
 class Traitement {
 
-  private $donnees;
 
   public function __construct() {
 
@@ -17,16 +15,11 @@ class Traitement {
       $analyse = new Analyze();
       $ret = $analyse->getValeur();
       var_dump($ret);
-
-      echo json_encode($ret);
-
-
-    }else{
-
+      echo $ret;
     }
+
   }
 
 
 }
-
 ?>
