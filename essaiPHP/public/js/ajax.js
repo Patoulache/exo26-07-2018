@@ -10,23 +10,20 @@ AJAX = {
 
   test: function (){
 
-    var form1= [];
-    var test = document.querySelectorAll('.valeur');
+    var donnees = document.querySelector('textarea[name=champ]').value;
 
     AJAX.req.onload = function(){
 
-      console.log(AJAX.req.status);
-      var recup= JSON.parse(AJAX.req.responseText);
-      console.log(recup);
-      console.log(recup.nom);
-     // MIRROIR.init3();
+      var retour = AJAX.req.responseText;
+      console.log(retour);
+
+
     }
 
-    console.log(form1);
 
-    AJAX.req.open('POST', 'transfo.php', true);
+    AJAX.req.open('POST', 'Modele/traitement.php', true);
     AJAX.req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    AJAX.req.send('donnees='.concat(form1));
+    AJAX.req.send('donnees='.concat(donnees));
   }
 }
 
