@@ -6,11 +6,17 @@
     <title></title>
   </head>
   <body>
-    <div class="cotegauche">
-      <textarea name="champ" rows="8" cols="80"></textarea>
-      <input type="button" name="envoie" value="envoyer">
-    </div>
-    <div class="cotedroit">
+    <div class="all">
+
+
+      <div class="cotegauche">
+        <textarea name="champ" rows="8" cols="80"></textarea>
+        <input type="button" name="envoie" value="envoyer">
+      </div>
+      
+      <div class="cotedroit">
+
+      </div>
 
     </div>
   </body>
