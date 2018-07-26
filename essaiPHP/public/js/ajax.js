@@ -15,7 +15,7 @@ AJAX = {
     AJAX.req.onload = function(){
 
       var retour = AJAX.req.responseText;
-      console.log(retour);
+      console.log(typeof retour);
 
 
     }
@@ -26,6 +26,5 @@ AJAX = {
     AJAX.req.send('donnees='.concat(donnees));
   }
 }
-
 
 window.onload = AJAX.init;
