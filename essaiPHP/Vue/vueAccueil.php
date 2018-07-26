@@ -10,10 +10,13 @@
 
 
       <div class="cotegauche">
-        <textarea name="champ" rows="8" cols="80"></textarea>
-        <input type="button" name="envoie" value="envoyer">
+        <div class="miseformg">
+          <textarea name="champ" rows="8" cols="80"></textarea>
+          <input type="button" name="envoie" value="envoyer">
+        </div>
+
       </div>
-      
+
       <div class="cotedroit">
 
       </div>

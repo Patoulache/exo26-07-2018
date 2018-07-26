@@ -10,8 +10,15 @@ html, body {
 }
 
 .cotegauche {
+  display: flex;
+  justify-content: center;
   width: 50%;
   background-color: green;
+}
+
+.miseformg {
+  display: flex;
+  align-items: center;
 }
 
 .all {
