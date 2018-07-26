@@ -21,7 +21,7 @@ AJAX = {
     }
 
 
-    AJAX.req.open('POST', 'Modele/traitement.php', true);
+    AJAX.req.open('POST', 'index.php', true);
     AJAX.req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     AJAX.req.send('donnees='.concat(donnees));
   }
