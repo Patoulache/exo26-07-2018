@@ -1,0 +1,13 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.cotedroit {
+  width: 50%;
+}
+
+.cotegauche {
+  width: 50%;
+}
