@@ -2,34 +2,40 @@
 
 class Analyze {
 
+  private $tbl = array();
+
   public function __construct() {
-    $this->calcLettre();
-    $this->calcMot();
-    $this->calcPhrase();
+    $this->tbl = [
+      'letter'  => $this->calcLettre(),
+      'mots'    => $this->calcMot(),
+      'phrases' => $this->calcPhrase(),
+    ];
+    var_dump($this->tbl);
+
   }
 
   private function calcLettre() {
     $str = $_POST['donnees'];
     $countLetter = preg_match_all('/[a-zA-Z]/', $str);
 
-    return $count;
+    return $countLetter;
 
   }
 
   private function calcMot() {
     $str = $_POST['donnees'];
-    $count = explode(" ", "$str");
-    $countMots = count($count);
+    $countMots = explode(" ", "$str");
+    $countMots = count($countMots);
 
-    return $count;
+    return $countMots;
   }
 
   private function calcPhrase() {
     $str = $_POST['donnees'];
-    $count = explode(".", "$str");
-    $countPhrases = count($count)-1;
+    $countPhrases = explode(".", "$str");
+    $countPhrases = count($countPhrases)-1;
 
-    return $count;
+    return $countPhrases;
   }
 
 }
