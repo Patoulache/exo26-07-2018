@@ -6,8 +6,5 @@
     <title></title>
   </head>
   <body>
-    <div class="coucou">
-
-    </div>
   </body>
 </html>
