@@ -3,32 +3,28 @@ AJAX = {
   req: new XMLHttpRequest(),
 
   init : function () {
-    var btn = document.querySelector('input{name=envoie}');
+    var btn = document.querySelector('input[name=envoie]');
     btn.addEventListener('click',AJAX.test);
 
   },
 
   test: function (){
 
-    var form1= [];
-    var test = document.querySelectorAll('.valeur');
+    var donnees = document.querySelector('textarea[name=champ]').value;
 
     AJAX.req.onload = function(){
 
-      console.log(AJAX.req.status);
-      var recup= JSON.parse(AJAX.req.responseText);
-      console.log(recup);
-      console.log(recup.nom);
-      MIRROIR.init3();
+      var retour = AJAX.req.responseText;
+      console.log(typeof retour);
+
+
     }
 
-    console.log(form1);
 
-    AJAX.req.open('POST', 'transfo.php', true);
+    AJAX.req.open('POST', 'index.php', true);
     AJAX.req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    AJAX.req.send('donnees='.concat(form1));
+    AJAX.req.send('donnees='.concat(donnees));
   }
 }
-
 
 window.onload = AJAX.init;
