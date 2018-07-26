@@ -2,97 +2,52 @@
 
 class Analyze {
 
-<<<<<<< HEAD
-=======
-  private $tbl = array();
->>>>>>> Romain
+  private $tbl = [];
+  private $str;
 
 
   public function __construct() {
+    $this->str = $_POST['donnees'];
 
-<<<<<<< HEAD
+
+
   }
 
   private function calcLettre() {
-
-    $str = $_POST['donnees'];
-    $countLetter = preg_match_all('/[a-zA-Z]/', $str);
-    var_dump($countLetter);
+    $regex = '/[a-zA-Z]/';
+    $countLetter = preg_match_all("$regex", "$this->str");
     return $countLetter;
 
   }
 
   private function calcMot() {
 
-    $str = $_POST['donnees'];
+    $regex = '/[^A-Za-zÀ-ÿ]/';
+    $countMots = preg_split("$regex", "$this->str");
+    $countMots1 = count($countMots);
 
-    $countMots = explode(" ", "$str");
-    $countMots = count($countMots);
-
-    return $countMots;
+    $this->tbl = ['mot' => $countMots1];
   }
 
   private function calcPhrase() {
-
-    $str = $_POST['donnees'];
-
-    $countPhrases = explode(".", "$str");
-    $countPhrases = count($countPhrases)-1;
-
-    return $countPhrases;
-  }
-
-
-=======
-    $this->tbl = [
-      'letter'  => $this->calcLettre(),
-      'mots'    => $this->calcMot(),
-      'phrases' => $this->calcPhrase(),
-    ];
-
-  }
-
-  private function calcLettre() {
-
-    $str = $_POST['donnees'];
-    $countLetter = preg_match_all('/[a-zA-Z]/', $str);
-
-    return $countLetter;
-
-  }
-
-  private function calcMot() {
-
-    $str = $_POST['donnees'];
-
-    $countMots = explode(" ", "$str");
-    $countMots = count($countMots);
-
-    return $countMots;
-  }
-
-  private function calcPhrase() {
-
-    $str = $_POST['donnees'];
-
-    $countPhrases = explode(".", "$str");
+    $regex = '/[^.!?]/';
+    $countPhrases = explode("$regex", "$this->str");
     $countPhrases = count($countPhrases)-1;
 
     return $countPhrases;
   }
 
   public function getValeur() {
+    $this->tbl = [
+      'letter'  => $this->calcLettre(),
+      'mots'    => $this->calcMot(),
+      'phrases' => $this->calcPhrase(),
+    ];
+
+
+
     return $this->tbl;
   }
 
->>>>>>> Romain
 }
-
-
-
-
-
-
-
-
 ?>
