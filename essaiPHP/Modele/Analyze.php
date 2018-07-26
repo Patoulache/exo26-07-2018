@@ -1,14 +1,25 @@
 <?php
 
-class Analyse {
+class Analyze {
 
-  private $donnees, $affDonnees;
 
-  public function __construct($donnees) {
-    $this->donnees = $donnees;
+
+  public function __construct() {
+    $this->calcLettre();
+
   }
 
-  
+  private function calcLettre() {
+    var_dump($_POST['donnees']);
+    $str = $_POST['donnees'];
+    var_dump($str);
+    $count = explode(" ", "$str");
+    $count = count($count);
+    var_dump($count);
+    return $count;
+
+  }
+
 }
 
 
