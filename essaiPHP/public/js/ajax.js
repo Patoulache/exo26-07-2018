@@ -3,7 +3,7 @@ AJAX = {
   req: new XMLHttpRequest(),
 
   init : function () {
-    var btn = document.querySelector('#valid');
+    var btn = document.querySelector('input[name=envoie]');
     btn.addEventListener('click',AJAX.test);
 
   },

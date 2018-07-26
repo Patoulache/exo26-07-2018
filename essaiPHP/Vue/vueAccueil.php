@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="public/style/style.css">
+    <script src="public/js/ajax.js" charset="utf-8"></script>
     <title></title>
   </head>
   <body>
