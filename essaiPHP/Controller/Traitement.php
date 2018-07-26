@@ -15,10 +15,14 @@ class Traitement {
 
       require ('Modele/Analyze.php');
       $analyse = new Analyze();
+      $ret = $analyse->getValeur();
+      var_dump($ret);
+
+      echo json_encode($ret);
 
 
     }else{
-      
+
     }
   }
 
