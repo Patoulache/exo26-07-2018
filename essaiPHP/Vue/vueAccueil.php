@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="public/style/style.css">
     <script src="public/js/ajax.js" charset="utf-8"></script>
+    <!-- <script src="public/js/moyenne.js" charset="utf-8"></script> -->
     <title></title>
   </head>
   <body>
@@ -27,6 +28,9 @@
         </div>
         <div class="phrase" name="rec">
           <h3>Stat phrases</h3>
+        </div>
+        <div>
+        <input type="button" name="envoyer" value="envoyer">
         </div>
       </div>
 

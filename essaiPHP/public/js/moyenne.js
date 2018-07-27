@@ -21,7 +21,7 @@ MOYENNE = {
 
 
 
-        MOYENNE.req.open('POST', 'Modele/traitement.php', true);
+        MOYENNE.req.open('POST', 'Modele/root.php', true);
         MOYENNE.req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         MOYENNE.req.send();
     }
