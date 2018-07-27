@@ -1,6 +1,7 @@
 AJAX = {
 
-  req: new XMLHttpRequest(),
+  req     : new XMLHttpRequest(),
+  count   : 0,
 
   init : function () {
     var btn = document.querySelector('input[name=envoie]');
@@ -11,14 +12,15 @@ AJAX = {
   },
 
   test: function () {
-
+    AJAX.count++;
+    console.log(AJAX.count);
     var valeur = document.querySelector('textarea[name=champ]').value;
 
     AJAX.req.onload = function(){
 
-      var retour = AJAX.req.response;
+      var retour = JSON.parse(AJAX.req.response);
       console.log(retour);
-      // AJAX.ajout(retour);
+      AJAX.ajout(retour);
 
     }
 

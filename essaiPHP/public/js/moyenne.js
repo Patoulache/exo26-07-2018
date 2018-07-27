@@ -12,7 +12,7 @@ MOYENNE = {
 
         MOYENNE.req.onload = function(){
             console.log(AJAX.req.status);
-            var recup = MOYENNE.req.response;
+            var recup = JSON.parse(MOYENNE.req.response);
             console.log(recup);
 
 
