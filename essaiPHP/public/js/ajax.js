@@ -1,10 +1,11 @@
 AJAX = {
 
-  req: new XMLHttpRequest(),
+  req     : new XMLHttpRequest(),
 
   init : function () {
     var btn = document.querySelector('input[name=envoie]');
     btn.addEventListener('click',AJAX.test);
+
     MOYENNE.init();
 
   },
@@ -41,10 +42,7 @@ AJAX = {
       newP.appendChild(contenu);
       recupe.appendChild(newP);
     }
-  }
-
-
+  },
 };
 
-  window.onload = AJAX.init;
-  
+window.onload = AJAX.init;
