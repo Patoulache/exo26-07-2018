@@ -2,20 +2,27 @@
 class Traitement {
 
 
-  public function __construct() {
+/*   public function __construct() {
 
     $this->traitReq();
-  }
+  } */
 
-  private function traitReq() {
+  public function traitReq() {
 
     if(isset($_POST['donnees'])){
 
-      require ('Modele/Analyze.php');
+      require ('../Modele/Analyze.php');
       $analyse = new Analyze();
+      $analyse->executeCalc();
       $ret = $analyse->getValeur();
-      var_dump($ret);
-      echo $ret;
+      echo json_encode($ret);
+
+    } else {
+
+      require ('../Modele/Analyze.php');
+      $analyze = new Analyze();
+      $moyenne = $analyze->getTblMoy();
+      echo json_encode($moyenne);
     }
 
   }
