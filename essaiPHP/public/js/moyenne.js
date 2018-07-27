@@ -27,5 +27,3 @@ MOYENNE = {
     }
 
 };
-
-window.onload = MOYENNE.init;

@@ -23,7 +23,7 @@ class Analyze {
     $countLetter = preg_match_all("$regex", "$this->str");
     // array_push($this->tbl, $countLetter);
     $this->tbl["lettre"] = $countLetter;
-    // $_SESSION["lettre"] += $countLetter;
+    $_SESSION += $countLetter;
   }
 
   private function calcMot() {
@@ -32,7 +32,7 @@ class Analyze {
     $countMots = preg_match_all("$regex", "$this->str");
     // array_push($this->tbl, $countMots);
     $this->tbl["mot"] = $countMots;
-    // $_SESSION["mot"] += $countMots;
+    $_SESSION += $countMots;
   }
 
   private function calcPhrase() {
@@ -40,7 +40,7 @@ class Analyze {
     $countPhrases = preg_match_all("$regex", "$this->str");
     // array_push($this->tbl, $countPhrases);
     $this->tbl["phrase"] = $countPhrases;
-    // $_SESSION["phrase"] += $countPrases;
+    $_SESSION += $countPrases;
   }
 
   public function getValeur() {
@@ -48,9 +48,9 @@ class Analyze {
     return $this->tbl;
   }
 
-/*   public function getTblMoy() {
+  public function getTblMoy() {
     
     return $_SESSION;
-  } */
+  }
 }
 ?>

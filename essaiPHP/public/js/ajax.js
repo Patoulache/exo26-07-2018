@@ -5,6 +5,7 @@ AJAX = {
   init : function () {
     var btn = document.querySelector('input[name=envoie]');
     btn.addEventListener('click',AJAX.test);
+    MOYENNE.init();
 
   },
 
@@ -45,4 +46,5 @@ AJAX = {
 
 };
 
-window.onload = AJAX.init;
+  window.onload = AJAX.init;
+  

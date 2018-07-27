@@ -17,13 +17,13 @@ class Traitement {
       $ret = $analyse->getValeur();
       echo json_encode($ret);
     
-    } /* else {
+    } else {
 
       require ('../Modele/Analyze.php');
       $analyze = new Analyze();
       $moyenne = $analyze->getTblMoy();
       echo json_encode($moyenne);
-    } */
+    }
 
   }
 
