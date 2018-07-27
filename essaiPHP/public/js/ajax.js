@@ -16,7 +16,7 @@ AJAX = {
 
     AJAX.req.onload = function(){
 
-      var retour = JSON.parse(AJAX.req.response);
+      var retour = AJAX.req.response;
       console.log(retour);
       // AJAX.ajout(retour);
 

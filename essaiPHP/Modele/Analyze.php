@@ -6,10 +6,8 @@ class Analyze {
   private $str;
 
 
-  public function __construct() {
-    if(isset($_POST['donnees'])){
-      $this->str = $_POST['donnees'];
-    }
+  public function __construct($valeur = 0) {
+    $this->str = $valeur;
 
   }
 
