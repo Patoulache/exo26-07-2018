@@ -3,10 +3,18 @@ html, body {
   padding: 0px;
 }
 
+p {
+  display: inline-block;
+  padding-right: 5px;
+  margin: 0px;
+}
+
 .cotedroit {
+  display: flex;
   width: 50%;
   background-color: blue;
   height: 100%;
+  flex-wrap: wrap;
 }
 
 .cotegauche {
@@ -30,8 +38,13 @@ html, body {
 
 .lettre, .mot, .phrase {
   text-align: center;
-  width: 50%;
-  height: 30%;
+  width: 33%;
+  height: 70%;
   border: 1px solid black;
   overflow: scroll;
+}
+
+.moyenne {
+  width: 33%;
+  height: 15%;  
 }

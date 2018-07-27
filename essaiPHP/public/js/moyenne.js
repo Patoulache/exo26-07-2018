@@ -15,10 +15,13 @@ MOYENNE = {
             var recup = JSON.parse(MOYENNE.req.response);
             console.log(recup);
             var moyLettre = recup.lettre/recup.count;
+            document.querySelector('.moyLettre').innerHTML = "Moyenne lettre = ".concat(moyLettre);
             console.log(moyLettre);
             var moyMot = recup.mot/recup.count;
+            document.querySelector('.moyMot').innerHTML = "Moyenne mot = ".concat(moyMot);
             console.log(moyMot);
             var moyPhrase = recup.phrase/recup.count;
+            document.querySelector('.moyPhrase').innerHTML = "Moyenne phrase = ".concat(moyPhrase);
             console.log(moyPhrase);
             
            

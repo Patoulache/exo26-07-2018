@@ -22,15 +22,18 @@
       <div class="cotedroit">
         <div class="lettre" name="rec">
           <h3>Stat lettres</h3>
+          <h4 class="moyLettre"></h4>
         </div>
         <div class="mot" name="rec">
           <h3>Stat mots</h3>
+          <h4 class="moyMot"></h4>
         </div>
         <div class="phrase" name="rec">
           <h3>Stat phrases</h3>
+          <h4 class="moyPhrase"></h4>
         </div>
-        <div>
-        <input type="button" name="envoyer" value="envoyer">
+        <div class="moyenne">
+        <input type="button" name="envoyer" value="moyenne">
         </div>
       </div>
 

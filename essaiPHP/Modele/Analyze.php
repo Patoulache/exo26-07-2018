@@ -50,7 +50,7 @@ class Analyze {
   }
 
   public function getTblMoy() {
-    $_SESSION[]= $this->tbl;
+
     return $_SESSION;
   }
 }
