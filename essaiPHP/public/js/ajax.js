@@ -15,12 +15,13 @@ AJAX = {
     AJAX.req.onload = function(){
 
       var retour = JSON.parse(AJAX.req.response);
+      console.log(retour);
       AJAX.ajout(retour);
 
     }
 
 
-    AJAX.req.open('POST', 'Modele/traitement.php', true);
+    AJAX.req.open('POST', 'Modele/root.php', true);
     AJAX.req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     AJAX.req.send('donnees='.concat(valeur));
 

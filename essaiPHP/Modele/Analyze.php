@@ -1,7 +1,8 @@
 <?php
+session_start();
 
 class Analyze {
-
+  
   private $tbl = [];
   private $str;
 
@@ -9,9 +10,15 @@ class Analyze {
   public function __construct() {
     $this->str = $_POST['donnees'];
 
+
+  
+  }
+
+  public function executeCalc() {
     $this->calcLettre();
     $this->calcMot();
     $this->calcPhrase();
+    
   }
 
   private function calcLettre() {
@@ -37,7 +44,7 @@ class Analyze {
   }
 
   public function getValeur() {
-
+    
     return $this->tbl;
   }
 
